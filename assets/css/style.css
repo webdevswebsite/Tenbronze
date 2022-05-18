@@ -1,0 +1,980 @@
+/* ----------------------
+
+01.Default CSS
+02.Preloader CSS
+03.Navbar CSS
+04.Main Banner CSS
+05.Why Choose Us CSS
+06.Pricing CSS
+07.Video CSS
+08.Services CSS 
+09.Stats CSS
+10.Counts CSS
+11.Client Carousel CSS
+12.Team CSS
+13.Plans CSS
+14.Testimonial CSS
+15.Blogs CSS
+16.Footer CSS
+17.Blog Detail Page CSS
+18.Contact Page CSS
+
+------------------------------------------------
+ --------------------------*/
+
+ /*======================================
+ ============= Default CSS ==============
+ ======================================= */
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+:root{
+    --blue: #1868dd;  
+    --gradient: linear-gradient(-45deg, #1045db 0%, #15095e 60%, #15095e 99%);
+    --dark-blue: #103dbe;
+    --white: #ffffff;
+    --black: #000000;
+}
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+section{
+    padding-top: 85px;
+    padding-bottom: 100px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h1{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.section-title span,
+.section-subtitle span{
+  color: var(--dark-blue);
+}
+.section-subtitle{
+    margin-bottom: 30px;
+}
+.section-subtitle h2{
+  font-weight: bold;
+  color: var(--blue);
+}
+a{
+    color: var(--blue);
+    transition: .5s all ease;
+    -webkit-transition: .5s all ease;
+}
+a:hover{
+    color: var(--blue);
+    text-decoration: none;
+}
+.btn{
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 15px 45px;
+    border: 1px solid var(--blue);
+    border-radius: 50px;
+    transform: scale(1);
+    overflow: hidden;
+}
+.btn:hover{
+  color: var(--white);
+}
+.btn:focus{
+    box-shadow: none;
+}
+.btn:after{
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  width: 0;
+  padding: 28px 0;
+  background: #15095e75;
+  border-radius: 50px;
+  left: 0;
+  margin-top: -16px;
+  transition: .5s all ease;
+  -webkit-transition: .5s all ease;
+}
+.btn:hover:after{
+  visibility: visible;
+  width: 100%!important;
+}
+.pb-70{
+    padding-bottom: 70px;
+}
+.pb-50{
+  padding-bottom: 50px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+.mb-50{
+  margin-bottom: 50px;
+}
+.color-white{
+  color: var(--white)!important;
+}
+.float-right{
+  float: right!important;
+}
+.float-left{
+  float: left!important;
+}
+.line-through{
+  text-decoration: line-through;
+}
+.bold{
+  font-weight: bold!important;
+}
+.form-control{
+    height: 50px;
+    border-radius: 10px;
+}
+.form-control:focus{
+  border-color: var(--blue);
+  box-shadow: 0 0 5px 0 var(--blue);
+}
+
+
+/*======================================
+ =========== Pre Loader CSS ============
+ ======================================= */
+
+ .loader_bg{
+  position: fixed;
+  z-index: 999999;
+  background: #fff;
+  width: 100%;
+  height: 1100vh;
+}
+.loader{
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+  content: ' ';
+  border: 1em solid var(--blue);
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+.loader:before{
+  animation-delay: .5s;
+}
+@keyframes loader{
+  0%{
+      transform: scale(0);
+      opacity: 0;
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+
+/*======================================
+ ============== Navbar CSS =============
+ ======================================= */
+ .navbar-top{
+   background-color: #000d31;
+   padding: 10px 0;
+   font-size: 12px;
+ }
+ .navbar-toggle-btn{
+  color: var(--white);
+}
+.navbar-toggler{
+  border-color: var(--white)!important;
+}
+ .navbar-toggler:focus{
+   outline-color: #03247f!important;
+   box-shadow: none!important;
+ }
+ @media only screen and (max-width:450px){
+   .navbar-top{
+     display: none;
+   }
+ }
+
+ @media only screen and (max-width:991px){
+  .navbar{
+    background: #15095e!important;
+  }
+ }
+
+ .sticky{
+  background: var(--gradient)!important;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  top: 0;
+}
+.nav-colored{
+  background: var(--gradient)!important;
+}
+ .navbar{
+  background: transparent;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.384);
+ }
+ .navbar-brand{
+  width: 14%;
+ }
+ @media only screen and (max-width:767px) and (min-width:400px){
+   .navbar-brand{
+     width: 24%;
+   }
+ }
+ @media only screen and (max-width:399px){
+   .navbar-brand{
+     width: 35%;
+   }
+ }
+ .nav-link{
+     color: var(--white)!important;
+ }
+
+
+ /*======================================
+ ============ Main Banner CSS ===========
+ ======================================= */
+ @media only screen and (min-width:992px){
+   .main-banner{
+    padding: 150px 0 100px 0!important;
+    position: relative;
+    margin-top: -73px;
+    left: 0;
+    right: 0;
+   }
+ }
+ @media only screen and (min-width:1200px){
+  .main-banner{
+    margin-top: -82px;
+  }
+ }
+.main-banner{
+  background: var(--gradient);
+  padding: 50px 0;
+}
+.main-banner-heading{
+  margin-top: 60px;
+}
+.main-banner-heading h1{
+  font-size: 50px;
+}
+.main-banner-btn .white-btn{
+  background-color: transparent;
+  border-color: var(--white);
+}
+.main-banner-btn .white-btn:after{
+  background: #ffffff9c!important;
+}
+
+
+/*======================================
+ ========== Why Choose Us CSS ==========
+ ======================================= */
+
+.choose-us-box{
+  border: 1px solid #f1f1f1;
+  padding: 20px 0;
+  box-shadow: 0 0 15px 0 #c1c1c187;
+}
+
+/*======================================
+ ============= Pricing CSS =============
+ ======================================= */
+ .pricing-box{
+  background: var(--white);
+  padding: 40px 30px;
+}
+.pricing-rate .media{
+  color: var(--blue);
+}
+
+.pricing-rate .media p{
+    font-size: 20px;
+}
+
+.pricing-rate .media h1{
+  font-size: 50px;
+}
+
+.pricing-colored{
+  background: linear-gradient(-45deg, #1045db 0%, #15095e 60%, #15095e 99%)!important;
+  color: var(--white);
+}
+.pricing-colored .media{
+  color: var(--white);
+}
+.pricing-colored .pricing-btn .btn{
+  background-color: var(--white);
+  color: var(--blue);
+}  
+
+.pricing-colored .line-through{
+  color:  #e8e8e8!important;
+}
+
+
+/*======================================
+ ================ Video CSS ===========
+ ======================================= */
+
+#video{
+  padding: 200px 0;
+  background-image: url(../images/video-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.video-play-icon a{
+  border: 1px solid var(--blue);
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  line-height: 60px;
+  padding-left: 2px;
+  background: #1868dd;
+  color: white;
+}
+
+
+/*======================================
+ ================ Services CSS ===========
+ ======================================= */
+
+ .services-box{
+   border: 1px solid #f1f1f1;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   transition: .5s all ease;
+   -webkit-transition: .5s all ease;
+ }
+  .services-box:hover{
+    border-color: var(--white);
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(23, 104, 221, 0.1);
+    box-shadow: 0px 10px 15px 0px rgba(23, 104, 221, 0.1);
+  }
+
+/*======================================
+ =============== Stats CSS =============
+ ======================================= */
+
+#stats{
+  /* background: linear-gradient(50deg, #1045db 0%, #15095e 57%); */
+  background-image: url(../images/stats-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  transform: scale(1);
+  padding-bottom: 180px;
+}
+  #stats-cards-area{
+    position: relative;
+    margin-top: -100px;
+  }
+  @media only screen and (max-width:575px){
+    .stats-card-img{
+      margin-bottom: 30px;
+    }
+  }
+.stats-card{
+  color: var(--white);
+  padding: 50px 30px;
+  background-color: var(--blue);
+  transform: scale(1);
+  overflow: hidden;
+}
+.card-dollor-icon{
+  position: absolute;
+  right: -15px;
+  top: -70px;
+  font-size: 170px;
+  color: #ffffff49;
+}
+.stats-card-btn .btn{
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+
+/*======================================
+ =============== Counts CSS ============
+ ======================================= */
+
+#counts {
+  background: var(--gradient);
+  padding: 80px 0 60px 0;
+}
+
+#counts .counter-txt span {
+  font-size: 48px;
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+#counts .counter-txt p {
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*======================================
+ ========== Client Carousel CSS ===========
+ ======================================= */
+
+#client{
+  padding: 50px 0;
+}
+.client-img img{
+  filter: grayscale(100%);
+  transition: .5s all ease;
+  -webkit-transition: .5s all ease;
+}
+.client-img img:hover{
+  filter: none;
+}
+
+
+/*======================================
+ =============== Team CSS ==============
+ ======================================= */
+ .team-img{
+   transform: scale(1);
+   overflow: hidden;
+ }
+ .team-overlay{
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1868ddcc;
+  height: 100%;
+  visibility: hidden;
+  transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+ }
+.team-overlay-txt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+  color: var(--white);
+  transition: .5s ease-out;
+  -webkit-transition: .5s ease-out;
+ }
+ .team-box:hover .team-overlay{
+  visibility: visible;
+  width: 100%;
+}
+.team-box:hover .team-overlay-txt{
+  visibility: visible;
+}
+  .team-icons a{
+    color: var(--dark-blue);
+    padding: 0 10px;
+  }
+  .team-txt{
+    box-shadow: 0 1px 5px 0 #1867dd52;
+    padding: 30px 0;
+    position: relative;
+    margin-top: -50px;
+    border: 1px solid #f1f1f1;
+    background-color: #ffffff;
+    width: 90%;
+  }
+
+/*======================================
+ ============= Plans CSS ==============
+ ======================================= */
+
+.plans-text-area .media-left span{
+  color: var(--blue);
+  font-size: 30px;
+}
+.plans-text-area .media-right h4{
+  font-size: 20px;
+}
+.plans-text-area .media-right p{
+  line-height: 25px;
+}
+.plans-list .plans-check-icon{
+  color: var(--blue);
+}
+
+/*======================================
+ ========== Testimonial CSS ===========
+ ======================================= */
+
+ #testimonials{
+   background: linear-gradient(50deg, #1045db 0%, #15095e 57%);
+ }
+ #testimonials .section-title span{
+   color: var(--blue);
+ }
+.testimonial-box{
+  transform: scale(1);
+  background-color: var(--white);
+  margin: 0 10px;
+  padding: 50px 30px;
+ }
+.testimonial-box .media-right h4{
+  font-size: 18px;
+}
+.testimonial-box .media-right span{
+  position: absolute;
+  right: 10px;
+  bottom: 38px;
+  font-size: 50px;
+  color: #e9e9e9;
+}
+
+
+/*======================================
+ =============== Blogs CSS ============
+ ======================================= */
+
+.blog{
+  transition: .5s all ease;
+  -webkit-transition: .5s all ease;
+} 
+.blog:hover{
+   transform: scale(1.02);
+ }
+.blog-text-area{
+  position: relative;
+  margin-top: -40px;
+  background-color: var(--white);
+  width: 90%;
+  padding: 30px 30px 30px 0;
+}
+.blog-text-area span{
+  border-left: 4px solid var(--blue);
+}
+.blog-text-area h4{
+  font-size: 20px;
+}
+
+.grid-pagination a{
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px;
+} 
+
+/*======================================
+ ================ Footer CSS ===========
+ ======================================= */
+
+ .upper-footer{
+     background-color: #0b0037;
+     color: #eaeaea;
+     padding-top: 70px;
+     padding-bottom: 20px;
+ }
+ .footer-logo a{
+     font-weight: bold;
+     font-size: 30px;
+     color: var(--white);
+ }
+ .footer-subscribe-btn button{
+  padding: 9px 30px;
+}
+.footer-subscribe-btn .btn:after{
+  padding: 22px 0px!important;
+  margin-top: -10px;
+}
+
+ .footer-list-heading{
+     margin-bottom: 20px;
+ }
+ .footer-list-heading h4{
+   color: var(--white);
+     font-size: 22px;
+     font-weight: bold;
+ }
+ .footer-list li{
+     margin-bottom: 20px;
+     transition: .5s all ease;
+     -webkit-transition: .5s all ease;
+ }
+ .footer-list li a{
+    color: #eaeaea;
+ }
+ .footer-list li p{
+   color: #8a8a8a;
+   margin-top: 10px;
+ }
+ .footer-list .footer-arrow{
+     font-size: 15px;
+ }
+ .footer-subscribe .form-control{
+   border-radius: 50px;
+ }
+ .footer-subscribe-btn{
+    position: absolute;
+    right: 18px;
+    bottom: 53px;
+ }
+ .footer-getin-touch-icons a{
+  border-radius: 50px;
+  font-size: 12px;
+  color: var(--white);
+  padding-left: 6px;
+  display: inline-block;
+  border: 1px solid var(--white);
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  margin-right: 10px;
+}
+.footer-getin-touch-text a{
+  color: var(--white);
+}
+.footer-getin-touch-icons a:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+ .lower-footer{
+    background: #080029;
+    padding: 10px 0;
+ }
+ .lower-footer{
+     text-align: center;
+     color: var(--white);
+ }
+ .lower-footer-copyright-area a{
+     font-weight: bold;
+     color: var(--white);
+ }
+ .lower-footer-privacy-area a{
+   font-size: 15px;
+     color: var(--white);
+ }
+ @media only screen and (max-width:991px){
+    .upper-footer{
+        text-align: center;
+    }
+    .footer-getin-touch-icons a{
+        padding-left: 0;
+    }
+ }
+
+ @media only screen and (min-width:767px){
+    .lower-footer-copyright-area{
+        float: left;
+    }
+     .lower-footer-privacy-area{
+         float: right;
+     }
+ }
+
+
+
+
+/*======================================
+ ==========Blog Detail Page CSS ===========
+ ======================================= */
+
+.read_more_area{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+ box-shadow: 0px 0px 2px 0px var(--blue);
+}
+.read_more_datecomment{
+  font-size: 95%;
+}
+.read_more_img img{
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+}
+.read_more_text h3{
+ color: var(--blue-color);
+ font-weight: bold;
+ border-top: 1px solid;
+ padding-top: 2%;
+ border-color: #cfd2d5;
+}
+.read_more_comment{
+ float: right;
+}
+.read_more_comment a{
+ text-decoration: none ;
+ color: var(--black);
+}
+.read_more_comment a:hover{
+ color: var(--blue);
+}
+.calender-comment{
+  color: #6c757d;
+}
+.blockquote{
+ margin-top: 3%;
+ margin-bottom: 3%;
+ margin-left: 5%;
+ padding: 2% 4%;
+ border-left: solid var(--blue);
+}
+.blockquote p{
+ margin-bottom: 0%;
+}
+.icons_list:hover{
+  color: var(--blue);
+}
+.social_tags{
+ font-weight: bold;
+ font-size: 80%!important;
+ width: 100%;
+}
+.social_tags ul{
+ list-style-type: none;
+}
+.social_tags li{
+ display: inline-block;
+ margin: 1%;
+}
+.social_tags li a{
+ text-decoration: none;
+ padding: 2%;
+ color: var(--blue);
+}
+.social_icons{
+ font-size: 90%!important;
+ width: 100%;
+}
+.social_icons li{
+ display: inline;
+ padding: 1%;
+ margin: 0%;
+}
+.social_icons_list a{
+ color: var(--blue);
+}
+.social_icons_list a:hover{
+  color: var(--blue);
+}
+.social_icons ul{
+ list-style-type: none;
+ text-align: right;
+ margin-bottom: 0%;
+ margin-right: 4%;
+}
+.comment_section img{
+  border-radius: 10px;
+  width: auto;
+}
+.comment_section h3{
+ color: var(--blue);
+}
+.total_comments a{
+ text-decoration: none;
+ color: #6c757d;
+}
+#reply_comment{
+ margin-left: 5%;
+ background-color: #f5f3f5;
+ padding: 3%;
+ margin-top: 2%;
+ margin-bottom: 6%;
+}
+.media-body h5 a{
+  font-size: 20px;
+ color: #000;
+ text-decoration: none;
+}
+.reply_button a{
+ color: var(--blue);
+ font-size: 80%;
+}
+.categories h4{
+  font-size: 25px;
+}
+.popular_posts h4{
+  font-size: 25px;
+}
+.popular_tags h4{
+  font-size: 25px;
+}
+.comment_form .form-control{
+  margin-bottom: 30px;
+}
+.comment_form h4{
+  font-size: 25px;
+ color: var(--blue);
+}
+.comment .media-body h5{
+  font-size: 20px;
+}
+.search_box .search{
+ padding: 5% 5%;
+  border: none;
+ height: 40px;
+ width: 100%;
+ background-color: whitesmoke;
+}
+.search_icon{
+ color: var(--blue);
+ position: absolute;
+ top: 36px;
+ right: 30px;
+}
+.categories ul{
+ padding-left: 0%;
+ list-style-type: none;
+}
+.categories span{
+ float: right;
+ color: var(--black);
+}
+.categories li a{
+ text-decoration: none;
+ font-weight: bold;
+ color: var(--blue);
+}
+.categories li{
+ margin-top: 3%;
+}
+.popular_posts_linkdate{
+ font-size: 80%;
+}
+.popular_posts img{
+  border-radius: 10px;
+  width: 30%;
+}
+.popular_posts_linkdate a{
+ color: var(--blue);
+}
+.popular_tags .tags a{
+  border-radius: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--blue);
+  background-color: #f5f5f5;
+  padding: 15% 20%;
+}
+.tags ul li {
+ display: inline-block;
+ margin: 5%;
+}
+.popular_tags h6{
+ font-weight: bold;
+}
+
+
+
+/*======================================
+ ========== Contact Page CSS ===========
+ ======================================= */
+
+ .contact-form .form-control{
+   margin-bottom: 20px;
+  }
+
+  .contact-follow-page{
+    box-shadow: 0px 0px 9px 2px #cccccc5e;
+    border-radius: 10px;
+    padding:10% 5%;
+  }
+  .contact-details{
+    padding: 0% 7%;
+  }
+  .contact-details .media-right h4{
+    font-size: 18px;
+  }  
+  .contact-details a{
+    color: var(--black);
+  }
+  .contact-address-icons{
+    font-size: 18px;
+    color: var(--blue);
+    margin-top: 2px;
+    margin-right: 10px;
+  }
+  .follow-us li{
+    display: inline;
+  }
+  .follow-us h3{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .follow-us a{
+    color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    font-size: 16px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+  }
+  .follow-icons{
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+  .follow-icon-second{
+    margin-left: 9px;
+  }
+  .follow-icon-last{
+    margin-left: 7px;
+    margin-top: 9px;
+  }
+  .follow-us a:hover{
+    color: var(--white);
+    border-color: var(--blue);
+    background-color: var(--blue);
+  }
+
+  .valid-feedback{
+    font-weight: bold;
+    font-size: 14px;
+    background: white;
+    padding-left: 10px;
+  }
+  .invalid-feedback{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 14px;
+    background: white;
+    padding-left: 10px;
+  }
